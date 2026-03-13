@@ -9,20 +9,12 @@ namespace Q5
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Close();
-            if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtIdade.Text))
-            {
-                MessageBox.Show("Cadastrado com Sucesso");
-                return;
-            }
-            Pessoa novoUsuario = new Pessoa();
-            novoUsuario.Nome = txtNome.Text;
-            novoUsuario.Idade = txtIdade.Text;
-            MessageBox.Show("Usúario Cadastrado com sucesso");
-         
+          Pessoa Cadasdastro = new Pessoa();
 
+            Cadasdastro.Nome = txtNome.Text;
+            Cadasdastro.Idade = txtIdade.Text;
+            Repositorio.ListaPessoas.Add(Cadasdastro);
+            listBox1.Items.Add($"{Cadasdastro.Nome} {txtIdade.Text}");  
         }
     }
 }

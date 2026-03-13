@@ -8,6 +8,6 @@ namespace Q5
 {
     internal class Repositorio
     {
-        public List<Pessoa> ListaPessoas = new List<Pessoa>();
+        public static List<Pessoa> ListaPessoas = new List<Pessoa>();
     }
 }
